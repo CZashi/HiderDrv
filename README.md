@@ -1,15 +1,17 @@
-# HideProcDrv
-Hide Process with multiples techniques
+# HiderDrv
+
+Hide Process & Driver 
 
 ---
-<details>
 
-<summary> Hiding Process, How It Works ? </summary>
+
+# Hiding Process, How It Works ? 
+
 soon
 
 ---
-  
-<details>
 
-<summary> Hiding Driver, How It Works ? </summary>
+
+# Hiding Driver, How It Works ?
+
 soon
