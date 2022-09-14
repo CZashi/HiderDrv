@@ -30,7 +30,7 @@ typedef struct _LDR_DATA_TABLE_ENTRY // LDTE
 
 PVOID GetMiProcessLoaderEntry()
 {
-    UNICODE_STRING FuncName 			   = { 0 };
+    UNICODE_STRING         FuncName 		   = { 0 };
     PUCHAR 		   pfnMmUnloadSystemImage  = NULL;
     PUCHAR 		   pfnMiUnloadSystemImage  = NULL;
     PUCHAR 		   pfnMiProcessLoaderEntry = NULL;
@@ -94,7 +94,7 @@ PVOID GetMiProcessLoaderEntry()
 
 NTSTATUS GetDriverObjectByName(PDRIVER_OBJECT* DriverObject, WCHAR* DriverName)
 {
-	UNICODE_STRING uDriverName = { 0 };
+    UNICODE_STRING uDriverName = { 0 };
     PDRIVER_OBJECT TempObject  = NULL;
     NTSTATUS       status      = STATUS_UNSUCCESSFUL;
 
@@ -145,7 +145,7 @@ VOID DriverReinitialize(PDRIVER_OBJECT DriverObject, PVOID Context, ULONG Count)
 
 NTSTATUS HideDriverByName(PWCHAR szDriverName)
 {
-	PDRIVER_OBJECT DriverObject = NULL;
+   PDRIVER_OBJECT  DriverObject = NULL;
     NTSTATUS       status       = STATUS_SUCCESS;
 
     status = GetDriverObjectByName( &DriverObject, szDriverName );
