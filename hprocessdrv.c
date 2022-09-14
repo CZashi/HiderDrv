@@ -7,7 +7,7 @@ PEPROCESS ForceFindProcessByName(PCHAR szName)
 {
 	PUCHAR    ProcessPathName = NULL;
 	PEPROCESS pEprocess       = NULL;
-    NTSTATUS  status          = STATUS_SUCCESS;
+        NTSTATUS  status          = STATUS_SUCCESS;
 
     for ( size_t i = 4; i < 0x10000000; i += 4 )
     {
@@ -34,11 +34,11 @@ PEPROCESS ForceFindProcessByName(PCHAR szName)
 HANDLE FindProcessIdByName(PCHAR szName)
 {
 	ULONG64     ActiveProcessLinksOffset = GetActiveProcessLinksOffset();
-    PUCHAR      processName 		     = NULL;
+        PUCHAR      processName 		     = NULL;
 	PEPROCESS   process     		     = NULL;
-    NTSTATUS    status      		     = STATUS_SUCCESS;
+        NTSTATUS    status      		     = STATUS_SUCCESS;
 	PLIST_ENTRY pHead      			     = NULL;
-    PLIST_ENTRY pNode      			     = NULL;
+        PLIST_ENTRY pNode      			     = NULL;
     
     KdPrint( ( "ActiveProcessLinksOffset = %llX\n", ActiveProcessLinksOffset) );
 	
@@ -134,7 +134,7 @@ ULONG GetProtectionOffset()
 NTSTATUS SetProtectionStatus(PEPROCESS Process)
 {
 	ULONG    ProtectionOffset = 0;
-    NTSTATUS status           = STATUS_SUCCESS;
+    	NTSTATUS status           = STATUS_SUCCESS;
 
     if ( ! MmIsAddressValid( Process ) ) {
         return STATUS_UNSUCCESSFUL;
@@ -152,9 +152,9 @@ NTSTATUS SetProtectionStatus(PEPROCESS Process)
 NTSTATUS HideProcessByProcessId(HANDLE ProcessId)
 {
 	ULONG     ActiveProcessLinksOffset = GetActiveProcessLinksOffset();
-	PEPROCESS Process 				   = NULL;
-    NTSTATUS  status  				   = STATUS_SUCCESS;
-    BOOLEAN   bFlag   				   = FALSE;
+	PEPROCESS Process 		   = NULL;
+    	NTSTATUS  status  		   = STATUS_SUCCESS;
+    	BOOLEAN   bFlag   		   = FALSE;
 	
     if ( ! ActiveProcessLinksOffset ) {
         KdPrint( ( "GetActiveListOffset failed\n" ) );
